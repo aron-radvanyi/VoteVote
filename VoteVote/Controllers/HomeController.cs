@@ -54,6 +54,10 @@ namespace VoteVote.Controllers
 		{
 			return View();
 		}
+		public ActionResult OpenCause()
+		{
+			return View();
+		}
 
 	}
 }

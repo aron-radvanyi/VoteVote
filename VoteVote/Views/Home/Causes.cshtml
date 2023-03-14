@@ -14,26 +14,70 @@
         * {
             font-family: "Source Sans Pro", sans-serif;
         }
-
-        h1 {
+        #h1Causes{
             color: whitesmoke;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 70px;
+            text-align: center;
         }
-
+        h2 {
+            color: #ffc0c7;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
         .card-title {
-            font-family: sans-serif;
-            font-size: 25px;
+            font-size: 35px;
             font-weight: bold;
         }
-
         .card-img-top {
-            padding: 10px;
-            width: 374px;
-            height: 300px;
+            max-width: 500px;
+            max-height: 250px;
+            min-height: 150px;
+        }
+        #containerCauses {
+            background-color: #15202b;
+            min-height: 1450px;
+        }
+        .card {
+            background-color: #bfded9;
+            margin-right: 25px;
+            margin-left: 25px;
+            margin-top: 25px;
+            height: 520px;
+            padding: 30px;
+        }
+        #row2 {
+            margin-top: 50px;
+        }
+        #row1 {
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+        #btnMore {
+            text-align: center;
+        }
+        #btnNumSign {
+            background-color: #ffc0c7;
+            color: #15202b;
+            font-size: 15px;
+            font-style: italic;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        #signedPeople {
+            color: #15202b;
+            font-weight: bold;
+            font-size: 18px;
+            font-style: italic;
+            margin-left: 5px;
+        }
+        .card-text {
+            font-size: 18px;
         }
 
-        .body-content {
-            background-color: #2b373a;
-        }
 
         
     </style>
@@ -43,50 +87,109 @@
 </head>
 
 <body>
-    <h1>Causes</h1>
+    <div class="container-fluid" id="containerCauses">
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="~/Content/Images/puppies.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Save the puppies in Edinburgh</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <a href="#" class="btn"> More </a>
+        <h1 id="h1Causes">Current Causes</h1>
+        <h2> Look up causes you like! </h2>
+
+        <div id="row1" class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div id="cause1" class="card h-100">
+                    <img src="~/Content/Images/teacher.jpg" class="card-img-top" alt="teachers">
+                    <div class="card-body">
+                        <h5 class="card-title">Increase the salary of teachers</h5>
+                        <div>
+                            <p class="card-text">More money for teachers on the universities, they deserve it!</p>
+                        </div>
+                    </div>
+                    <div>
+                        <a id="btnNumSign" class="btn">254,891 <img src="~/Content/Images/people-fill.svg"></img></a><a id="signedPeople">people signed</a>
+                    </div>
+                    <a class="btn" @Html.ActionLink("More","OpenCause","Home")</a>
                 </div>
             </div>
+            <div class="col">
+                <div id="cause1" class="card h-100">
+                    <img src="~/Content/Images/pinguins.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> Save the pinguins on Antarctica! </h5>
+                        <div>
+                            <p class="card-text"> Pinguins are dying for hunger and our government does not do anything!</p>
+                        </div>
+                    </div>
+                    <div>
+                        <a id="btnNumSign" class="btn">157,876 <img src="~/Content/Images/people-fill.svg"></img></a><a id="signedPeople">people signed</a>
+                    </div>
+                    <a class="btn"> More </a>
+                </div>
+            </div>
+            <div class="col">
+                <div id="cause1" class="card h-100">
+                    <img src="~/Content/Images/farmer.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">More subsidies for farmers! </h5>
+                        <div>
+                            <p class="card-text"> Farmers feed as but they cannot survive without sallaries!#subsidies #farmers #cow</p>
+                        </div>
+                    </div>
+                    <div>
+                        <a id="btnNumSign" class="btn">89,758 <img src="~/Content/Images/people-fill.svg"></img></a><a id="signedPeople">people signed</a>
+                    </div>
+                    <a class="btn"> More </a>
+                </div>
+            </div>
+            <div id="row2" class="col">
+                <div class="card h-100">
+                    <img src="~/Content/Images/stopwar.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">STOP WAR in Ukraine!</h5>
+                        <div>
+                            <p class="card-text">People are suffering in the terrible war in Ukraine, END this war! #peace #endwar #Ukrain</p>
+                        </div>
+                    </div>
+                    <div>
+                        <a id="btnNumSign" class="btn">120,891 <img src="~/Content/Images/people-fill.svg"></img></a><a id="signedPeople">people signed</a>
+                    </div>
+                    <a class="btn"> More </a>
+                </div>
+            </div>
+            <div id="row2" class="col">
+                <div class="card h-100">
+                    <img src="~/Content/Images/Working-with-NES.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Protect NHS. More money for nurses!</h5>
+                        <div>
+                            <p class="card-text">NHS does not pay enough for nurses!</p>
+                        </div>
+                    </div>
+                    <div>
+                        <a id="btnNumSign" class="btn">254,891 <img src="~/Content/Images/people-fill.svg"></img></a><a id="signedPeople">people signed</a>
+                    </div>
+                    <a class="btn"> More </a>
+                </div>
+            </div>
+            <div id="row2" class="col">
+                <div class="card h-100">
+                    <img src="~/Content/Images/puppies.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Save the puppies in Edinburgh</h5>
+                        <div>
+                            <p class="card-text">Adopt the puppies in Edinburgh who are born in the wrong house. #keep #puppies #safe</p>
+                        </div>
+                    </div>
+                    <div>
+                        <a id="btnNumSign" class="btn">184,891 <img src="~/Content/Images/people-fill.svg"></img></a><a id="signedPeople">people signed</a>
+                    </div>
+                    <a class="btn"> More </a>
+                </div>
+            </div>
+
+
+
         </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="~/Content/Images/Working-with-NES.jpg"  class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Protect NHS. More money for nurses!</h5>
-                    <p class="card-text">This is a short card.</p>
-                    <a href="#" class="btn"> More </a>
-                </div>
-            </div>
-        </div> 
-        <div class="col">
-            <div class="card h-100">
-                <img src="~/Content/Images/stopwar.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">STOP WAR in Ukraine. Save lives of the suffering people!</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn"> More </a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="~/Content/Images/teacher.jpg"  class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Increase the salary of teachers!</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <a href="#" class="btn"> More </a>
-                </div>
-            </div>
-        </div>
+
     </div>
+   
 
 </body>
 

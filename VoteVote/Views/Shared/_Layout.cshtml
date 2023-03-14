@@ -10,6 +10,8 @@
 
     <!-- linked google font-family-->
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <!-- linked w3 colors-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 
@@ -21,19 +23,17 @@
         * {
             font-family: "Source Sans Pro", sans-serif;
         }
-        #bodyLayout {
-
-        }
 
         #containerLayout {
             background-color: #15202b;
         }
 
-        .nav-link {
+        #layoutPages {
             text-indent: 35px;
             color: whitesmoke;
-            font-size: 18px;
+            font-size: 23px;
             font-weight: bold;
+            outline-color: #04AA6D;
         }
 
         .btn {
@@ -43,18 +43,25 @@
             font-weight: bold;
         }
 
+        #btnSignUp {
+            color: #15202b;
+            font-size: 18px;
+            background-color: #bfded9;
+            font-weight: bold;
+        }
+
         .dropdown-menu {
             background-color: #bfded9;
-            font-size: 18px;
-            font-weight: bold;
-            color: black;
+            font-size: 25px;
         }
 
-        #dropdownLayout {
-            font-weight: bold;
+        #dropLink {
+            font-size: 25px;
+            color: #15202b;
         }
 
-        
+        #btnSignUp {
+        }
     </style>
 </head>
 <body id="bodyLayout">
@@ -63,34 +70,35 @@
             <div class="nav-item">
                 <img src="~/Content/Images/free_icon_5.svg" alt="SvgLogo" width="50" height="50"/>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarItemCollapse" aria-controls="navbarItemCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="background-color: whitesmoke;"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarItemCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link"@Html.ActionLink("Index", "Index", "Home")</a>
+                        <a id="layoutPages" class="nav-link"@Html.ActionLink("Home", "Index", "Home")</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"@Html.ActionLink("About", "About", "Home")</a>
+                        <a id="layoutPages" class="nav-link"@Html.ActionLink("About", "About", "Home")</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Browse</a>
+                        <a id="layoutPages" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Browse</a>
                         <ul class="dropdown-menu" id="dropdownLayout">
-                            <li class="nav-link">
-                                @Html.ActionLink("Causes", "Causes", "Home")
+                            <li id="dropLink" class="nav-link">
+                                @Html.ActionLink("Current Causes", "Causes", "Home")
                             </li>
-                            <li class="nav-link">
-                                @Html.ActionLink("CreateACause","CreateACause","Home")
+                            <li id="dropLink" class="nav-link">
+                                @Html.ActionLink("Create a Cause","CreateACause","Home")
                             </li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
                 </ul>
-                
+                  
             </div>
-            <a class="btn"@Html.ActionLink("Login", "Login", "Home")</a>
+            <a id="btnSignUp" class="btn" @Html.ActionLink("Sign Up","SignUp","Home")> </a>
+            <a class="btn"@Html.ActionLink("Log in", "Login", "Home")></a>
             <div>
 
             </div>

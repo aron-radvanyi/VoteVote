@@ -2,6 +2,7 @@
     font-family: "Source Sans Pro", sans-serif;
 }
 
+
 #containerForms {
     background: whitesmoke;
     padding: 10px;
@@ -41,4 +42,8 @@ h1 {
 
 .input-group-text {
     color: #15202b;
+}
+
+#btnFb {
+    background-color: #15202b;
 }
