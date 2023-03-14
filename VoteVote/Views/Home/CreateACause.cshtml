@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "CreateACause";
+}
+
+<head>
+    <!-- linked google font-family-->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+    <link href="~/Form.css" rel="stylesheet" />
+    
+    <style>
+        
+    </style>
+
+</head>
+
+<body id="formsBody">
+<div class="container" id="containerForms">
+    <h1> Create a new cause </h1>
+    <form class="px-4 py-3">
+        <div class="mb-3">
+            <label for="exampleDropdownFormEmail1" class="form-label">Title</label>
+            <input type="email" class="form-control" id="exampletitle" placeholder="Your cool title">
+        </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Upload a picture of your cause</label>
+            <input class="form-control" type="file" id="formFile">
+        </div>
+        <div class="mb-3">
+            <span class="input-text" style="font-weight:bold">Description</span>
+            <textarea class="form-control" aria-label="With textarea" style="min-block-size:300px; min-width: 500px;" placeholder="Your cause with an cool description!"></textarea>
+        </div>
+        <button id="btn-submit" type="submit" class="btn">Create</button>
+      
+
+        
+    </form>
+</div>
+
+
+</body>
+

@@ -1,0 +1,44 @@
+﻿* {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+#containerForms {
+    background: whitesmoke;
+    padding: 10px;
+}
+
+.form-label {
+    color: #15202b;
+}
+
+h1 {
+    color: #15202b;
+    font-weight: bold;
+    font-size: 45px;    
+}
+
+.dropdown-item {
+    color: #15202b;
+}
+
+.form-check-label {
+    color: #15202b;
+}
+
+.px-4 {
+    box-sizing: border-box;
+}
+
+.form-control {
+    background-color: white;
+}
+
+.dropdown-item {
+    font-weight: bold;
+    color: #04AA6D;
+    font-size: 15px;
+}
+
+.input-group-text {
+    color: #15202b;
+}

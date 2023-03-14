@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Reset";
+}
+
+<head>
+    <!-- linked google font-family-->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+    <!-- Linking external css file for style-->
+    <link href="~/Form.css" rel="stylesheet" />
+
+</head>
+
+<body id="formsBody">
+    <div class="container" id="containerForms">
+        <form class="px-4 py-3">
+            <h1> Reset Password </h1>
+            <div>
+                <a> We will email you with a link to reset your password.</a>
+            </div>
+            <br/>
+            <div class="mb-3">
+                <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+            </div>
+
+            <button id="btn-submit" type="submit" class="btn">Reset</button>
+            <br/>
+            <br/>
+
+            <div class="dropdown-divider"></div>
+            <a> Don't have an account? </a>
+            <a class="dropdown-item" @Html.ActionLink("SignUp", "SignUp", "Home")</a>
+        </form>
+    </div>
+</body>
+

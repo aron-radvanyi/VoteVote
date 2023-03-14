@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Linked Bootstrap 5.3 as CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- linked google font-family-->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+
+
+    <title>@ViewBag.Title - VoteVote</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        * {
+            font-family: "Source Sans Pro", sans-serif;
+        }
+        #bodyLayout {
+
+        }
+
+        #containerLayout {
+            background-color: #15202b;
+        }
+
+        .nav-link {
+            text-indent: 35px;
+            color: whitesmoke;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .btn {
+            color: whitesmoke;
+            font-size: 18px;
+            background-color: #04AA6D;
+            font-weight: bold;
+        }
+
+        .dropdown-menu {
+            background-color: #bfded9;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+        }
+
+        #dropdownLayout {
+            font-weight: bold;
+        }
+
+        
+    </style>
+</head>
+<body id="bodyLayout">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbarLayout">
+        <div class="container-fluid" id="containerLayout">
+            <div class="nav-item">
+                <img src="~/Content/Images/free_icon_5.svg" alt="SvgLogo" width="50" height="50"/>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarItemCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link"@Html.ActionLink("Index", "Index", "Home")</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"@Html.ActionLink("About", "About", "Home")</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Browse</a>
+                        <ul class="dropdown-menu" id="dropdownLayout">
+                            <li class="nav-link">
+                                @Html.ActionLink("Causes", "Causes", "Home")
+                            </li>
+                            <li class="nav-link">
+                                @Html.ActionLink("CreateACause","CreateACause","Home")
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </div>
+            <a class="btn"@Html.ActionLink("Login", "Login", "Home")</a>
+            <div>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div class="container-fluid">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
