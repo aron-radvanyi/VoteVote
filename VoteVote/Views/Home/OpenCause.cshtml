@@ -3,53 +3,235 @@
     ViewBag.Title = "OpenCause";
 }
 <head>
-    <link href="~/Form.css" rel="stylesheet" />
+    <style>
+        
+        #openCauseFluid {
+            background-color: #15202b;
+            min-height: 1500px;
+        }
+        #h1OpenCause {
+            color: whitesmoke;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 50px;
+            text-align: center;
+        }
+        #h2Opencasue {
+            color: #ffc0c7;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #cardImageOpenCauses {
+            background-color: #bfded9;
+            max-width: 600px;
+            margin-left: 20px;
+        }
+        #imgopenCause {
+            max-width: 600px;
+            max-height: 350px;
+            padding: 30px;
+        }
+        
+        #cardSignedPeople {
+            background-color: #bfded9;
+            color: #15202b;
+            font-weight: bold;
+            position: absolute;
+            display: inline;
+            margin-left: 760px;
+            max-height: 400px;
+            min-width: 300px;
+        }
+        #openCauseCardBody {
+            color: #15202b;
+            font-size: 20px;
+            font-style: italic;
+            text-justify: auto;
+        }
+        #btnNumSign {
+            background-color: #ffc0c7;
+            color: #15202b;
+            font-size: 15px;
+            font-style: italic;
+            margin-bottom: 10px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        #signedPeople {
+            color: #15202b;
+            font-weight: bold;
+            font-size: 15px;
+            font-style: italic;
+            margin-left: 5px;
+        }
+        #btnStartedVote {
+            background-color: #ffc0c7;
+            color: #15202b;
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        #startedVote {
+            color: #15202b;
+            font-weight: bold;
+            font-size: 18px;
+            font-style: italic;
+            margin-left: 10px;
+        }
+        .progress {
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+        #progressBar {
+            background: linear-gradient(260deg, #ffc0c7, #15202b);
+        }
+        #signedtable {
+            background-color: whitesmoke;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            background: #bfded9;    
+        }
+        #tableTitle {
+            background: #bfded9;
+            font-weight: bold;
+            font-size: 18px;
+            font-style: italic;
+        }
+        #rowsignedPeople {
+            background: #bfded9;
+        }
+        #trsignedup {
+            background: #ffc0c7;
+        }
+        #btnVote {
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        #cardShare {
+            background-color: #bfded9;
+            color: #15202b;
+            font-weight: bold;
+            position: absolute;
+            display: inline;
+            margin-left: 760px;
+            max-height: 275px;
+            min-width: 300px;
+            top: 700px;
+        }
+        #btnShare {
+            margin-left: 20%;
+            margin-right: 2%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            width: 180px;
+            text-align: center;
+        }
+        #CreateCauseOpenCause {
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: 35px;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 25px;
+        }
+        #btnCreataCauseOpenCause {
+            margin-left: 510px;
+            max-width: 155px;
+        }
+        
+      
+    </style>
+
 
 </head>
 
-<body id="formsBody">
-<div class="container" id="containerForms">
-
-    <h1> Increase the salary of teachers </h1>
-    <form class="px-4 py-3">
-        <div class="mb-3">
-            <label for="exampleDropdownFormEmail1" class="form-label">Title</label>
-            <input type="email" class="form-control" id="exampletitle" placeholder="Your cool title">
-        </div>
-        <div class="mb-3">
-            <label for="formFile" class="form-label">Upload a picture of your cause</label>
-            <input class="form-control" type="file" id="formFile">
-        </div>
-        <div class="mb-3">
-            <div class="mb-3">
-                <label class="mb-3" for="inputGroupSelect01">Choose a vote target!</label>
-                <select class="custom-select mb-3" id="inputGroupSelect01">
-                    <option selected value="50">50</option>
-                    <option value="100">100</option>
-                    <option value="250">250</option>
-                    <option value="1000">1000</option>
-                </select>
+<body>
+<div id="containerOpenCause" class="container">
+    <div id="openCauseFluid" class="container-fluid">
+        <div class="container-fluid">
+            <h1 id="h1OpenCause"> Increase the salary of teachers </h1>
+            <h2 id="h2Opencasue"> More money for teachers on the universities, they deserve it! </h2>
+            <div id="cardSignedPeople" class="card h-100">
+                <div>
+                    <a id="btnNumSign" class="btn">254,891 <img src="~/Content/Images/people-fill.svg"></img></a><a id="signedPeople">people signed from 500,000</a>
+                    <div id="progress" class="progress">
+                        <div id="progressBar" class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <table id="signedtable" class="table">
+                        <thead>
+                            <tr>
+                                <th id="tableTitle" scope="col"> People who have voted for this cause: </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="trsignedup">
+                                <th id="rowsignedPeople" scope="row"> <img src="~/Content/Images/person-circle.svg"></img> Aron Radvanyi </th>
+                            </tr>
+                            <tr>
+                                <th id="rowsignedPeople" scope="row"> <img src="~/Content/Images/person-circle.svg"></img> Axel Zengerle </th>
+                            </tr>
+                            <tr>
+                                <th id="rowsignedPeople" scope="row"> <img src="~/Content/Images/person-circle.svg"></img> Carolina von Vajna </th>
+                            </tr>
+                            <tr>
+                                <th id="rowsignedPeople" scope="row"> <img src="~/Content/Images/person-circle.svg"></img> Federico Italian </th>
+                            </tr>
+                            <tr>
+                                <th id="rowsignedPeople" scope="row"> <img src="~/Content/Images/person-circle.svg"></img> John Owens </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-
-        </div>
-        <div class="mb-3">
-            <div class="mx-auto">
-                <span class="input-text" style="font-weight: bold">Brief description</span>
-                <textarea id="textBriefDescription" maxlength="200" style="margin-top: 5px;" class="form-control" aria-label="With textarea" placeholder="Please,briefly describe your casue!"></textarea>
+            <div id="cardImageOpenCauses" class="card h-100">
+                <img id="imgopenCause" src="~/Content/Images/teacher.jpg" class="card-img-top" alt="teachers">
+                <div id="openCauseCardBody" class="card-body">
+                    <div>
+                        <a id="btnStartedVote" class="btn"> <img src="~/Content/Images/person-circle.svg"></img> Aron Radvanyi </a><a id="startedVote">started this cause</a>
+                    </div>
+                    <div>
+                        <p class="card-text"> Right now we have a rare opportunity to fundamentally reshape the future, and it begins with the teaching profession. We know that our education system isn’t prepared to meet our present or future needs. We also know that systemic changes will only occur when strong college students choose teaching and when excellent teachers can afford to stay in their classroom. </p>
+                        <p class="card-text"> We invite you to join The Teacher Salary Project and improve teachers’ salaries as a cornerstone to the reform our communities need. Paying teachers what they’re worth can transform teaching into the prestigious, desirable, financially viable, and professionally exciting job we all know it needs to be. </p>
+                        <p class="card-text"> Thank you!</p>
+                        <p class="card-text"> Aron </p>
+                    </div>
+                </div>
+                <a id="btnVote" class="btn" @Html.ActionLink("Vote for this", "Login", "Home")</a>
+            </div>
+            <div id="cardShare" class="card h-100">
+                <h3 style="text-align: center; font-weight: bold;"> Share your cause: </h3>
+                <div>
+                    <div> <a id="btnShare" class="btn" style="background-color: #3b5998;"><img src="~/Content/Images/facebook.svg"/> Facebook </a></div>
+                    <div> <a id="btnShare" class="btn" style="background-color: #fa7e1e; color: #15202b;"><img src="~/Content/Images/instagram.svg"/> Instagram </a></div>
+                    <div> <a id="btnShare" class="btn" style="background-color: #26a7de; color: #15202b;"><img src="~/Content/Images/twitter.svg"/> Twitter </a></div>
+                    <div> <a id="btnShare" class="btn" style="background-color: #171515;"> <img style="background-color: whitesmoke;" src="~/Content/Images/github.svg"/> Github </a></div>
+                </div>
             </div>
         </div>
-        <div class="mb-3">
-            <div class="mx-auto">
-                <span class="input-text" style="font-weight: bold">Description</span>
-                <textarea id="textDescription" maxlength="1000" class="form-control" aria-label="With textarea" placeholder="Your cause with an cool description!"></textarea>
+        <div class="row">
+            <h3 id="CreateCauseOpenCause">
+                Looking for a cause?
+            </h3>
+            <div class="mx-auto col-10 col-md-8 col-lg-3" id="searchIndex">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search for causes" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
         </div>
-        <button id="btn-submit" type="submit" class="btn">Create</button>
-
-
-
-    </form>
+        <div class="row">
+            <h3 id="CreateCauseOpenCause">
+                Fancy to create a cause?
+            </h3>
+            <a id="btnCreataCauseOpenCause" class="btn" type="submit" @Html.ActionLink("Create your cause","CreateACause","Home")</a>
+            
+        </div>
+    </div>
 </div>
-
-
 </body>

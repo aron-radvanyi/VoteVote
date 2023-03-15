@@ -1,7 +1,82 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<head>
+    <!-- linked google font-family-->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 
-<p>Use this area to provide additional information.</p>
+    <!-- linking form allignment to centre API -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheetCentreAllignment"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous" />
+
+    <style>
+        #containerIndex {
+            background: linear-gradient(175deg, #15202b 0%, #15202b 50%, #bfded9 50%, #bfded9 100%);
+            height: 1500px;
+        }
+
+        h1 {
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: 95px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ffc0c7;
+            font-weight: bold;
+            font-size: 25px;
+            text-align: center;
+        }
+        h4 {
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: 45px;
+            margin-left: 160px;
+        }
+
+        #cardImageOpenCauses {
+            background-color: #fff4a3;
+            max-width: 600px;
+            margin-left: 20px;
+            font-style: italic;
+            font-size: 20px;
+        }
+        #imgopenCause {
+            max-width: 400px;
+            max-height: 350px;
+            padding: 30px;
+            margin-left: 85px;
+        }
+        .card-text {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid" id="containerIndex">
+        <h1> About us </h1>
+        <h2> Here you can read about us </h2>    
+        <div style="margin-top: 50px">
+            <h4>
+                Founder and CEO: 
+            </h4>
+            <div>
+                <div id="cardImageOpenCauses" class="card h-100">
+                    <h2 style="color: #15202b; font-size: 35px;"> Aron Radvanyi</h2>
+                    <img id="imgopenCause" src="~/Content/Images/me.jpg" class="card-img-top" alt="teachers">
+                    <div id="openCauseCardBody" class="card-body">
+                        <div>
+                            <p class="card-text"> Hi, my name is Aron Radvanyi. I am an MSc Computing student at Edinburgh Napier University. I love creating websites (joking, this is just a coursework assignment). Hope I will get a good mark and my design will be favoured by the profs. 😊 </p>         
+                            <p class="card-text"> Take care, Aron </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   

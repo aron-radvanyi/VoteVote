@@ -15,7 +15,7 @@
 h1 {
     color: #15202b;
     font-weight: bold;
-    font-size: 45px;    
+    font-size: 45px;
 }
 
 .dropdown-item {
@@ -46,4 +46,25 @@ h1 {
 
 #btnFb {
     background-color: #15202b;
+}
+
+#cardShare {
+    background-color: whitesmoke;
+    color: #15202b;
+    font-weight: bold;
+    position: absolute;
+    display: inline;
+    margin-left: 820px;
+    max-height: 275px;
+    min-width: 300px;
+    top: 200px;
+}
+
+#btnShare {
+    margin-left: 20%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 180px;
+    text-align: center;
 }

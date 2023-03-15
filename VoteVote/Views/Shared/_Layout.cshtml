@@ -31,7 +31,7 @@
         #layoutPages {
             text-indent: 35px;
             color: whitesmoke;
-            font-size: 23px;
+            font-size: 22px;
             font-weight: bold;
             outline-color: #04AA6D;
         }
@@ -56,68 +56,72 @@
         }
 
         #dropLink {
-            font-size: 25px;
+            font-size: 22px;
             color: #15202b;
         }
-
-        #btnSignUp {
+        #navbarDivisionLayout {
+            height: 70px;
         }
+        
     </style>
 </head>
 <body id="bodyLayout">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbarLayout">
-        <div class="container-fluid" id="containerLayout">
-            <div class="nav-item">
-                <img src="~/Content/Images/free_icon_5.svg" alt="SvgLogo" width="50" height="50"/>
+    <div id="navbarDivisionLayout">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbarLayout">
+            <div class="container-fluid" id="containerLayout">
+                <div class="nav-item">
+                    <img style="margin-left: 50px;" src="~/Content/Images/icon.svg" alt="SvgLogo" width="50" height="50" />
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarItemCollapse" aria-controls="navbarItemCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="background-color: whitesmoke;"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarItemCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a id="layoutPages" class="nav-link" @Html.ActionLink("Home", "Index", "Home")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="layoutPages" class="nav-link" @Html.ActionLink("About", "About", "Home")</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="layoutPages" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Browse</a>
+                            <ul class="dropdown-menu" id="dropdownLayout">
+                                <li id="dropLink" class="nav-link">
+                                    @Html.ActionLink("Current Causes", "Causes", "Home")
+                                </li>
+                                <li id="dropLink" class="nav-link">
+                                    @Html.ActionLink("Create a Cause", "CreateACause", "Home")
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li id="dropLink" class="dropdown-item" href="#"> @Html.ActionLink("My causes","Login","Home")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <a id="btnSignUp" class="btn" @Html.ActionLink("Sign Up", "SignUp", "Home")> </a>
+                <a class="btn" @Html.ActionLink("Log in", "Login", "Home")></a>
+                <div>
+
+                </div>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarItemCollapse" aria-controls="navbarItemCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="background-color: whitesmoke;"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarItemCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a id="layoutPages" class="nav-link"@Html.ActionLink("Home", "Index", "Home")</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="layoutPages" class="nav-link"@Html.ActionLink("About", "About", "Home")</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a id="layoutPages" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Browse</a>
-                        <ul class="dropdown-menu" id="dropdownLayout">
-                            <li id="dropLink" class="nav-link">
-                                @Html.ActionLink("Current Causes", "Causes", "Home")
-                            </li>
-                            <li id="dropLink" class="nav-link">
-                                @Html.ActionLink("Create a Cause","CreateACause","Home")
-                            </li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                  
-            </div>
-            <a id="btnSignUp" class="btn" @Html.ActionLink("Sign Up","SignUp","Home")> </a>
-            <a class="btn"@Html.ActionLink("Log in", "Login", "Home")></a>
-            <div>
+        </nav>
 
-            </div>
-        </div>
-    </nav>
-
-
-
-
-    <div class="container-fluid">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+
+
+
+
+<div class="container-fluid">
+    @RenderBody()
+    <hr/>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
 </body>
 </html>
