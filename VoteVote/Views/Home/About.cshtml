@@ -10,11 +10,19 @@
           rel="stylesheetCentreAllignment"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script> 
+        $(document).ready(function () {
+            $("#btnContacts").click(function () {
+                $("#contacctHiden").slideToggle("slow")
+            });
+        });
+</script> 
 
     <style>
         #containerIndex {
             background: linear-gradient(175deg, #15202b 0%, #15202b 50%, #bfded9 50%, #bfded9 100%);
-            height: 1500px;
+            min-height: 1000px;
         }
 
         h1 {
@@ -54,6 +62,19 @@
             font-weight: bold;
             font-size: 18px;
         }
+
+        #btnContacts {
+            width: 200px;
+            margin-top: 20px;
+        }
+
+        #contacctHiden {
+            display: none;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+            margin-top: 10px;
+        }
     </style>
 </head>
 
@@ -76,6 +97,23 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="container">
+                <div id="contacts" class="row">
+                    <div id="btnContacts" class="btn"> Show contacts</div>
+                    <div id="contacctHiden">
+                        <p>
+                            <img src="~/Content/Images/envelope.svg" /> email: aron.radvanyi1@gmail.com
+                        </p>
+                        <p>
+                            <img src="~/Content/Images/telephone-fill.svg" /> phone number: 07859759426
+                        </p>
+                        <p>
+                            <img src="~/Content/Images/github.svg" />  github: aron-radvanyi
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

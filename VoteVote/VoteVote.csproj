@@ -131,6 +131,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\envelope.svg" />
     <Content Include="Content\Images\facebook-icon-white-logo-svgrepo-com.svg" />
     <Content Include="Content\Images\facebook.svg" />
     <Content Include="Content\Images\farmer.jpg" />
@@ -150,6 +151,7 @@
     <Content Include="Content\Images\Logo 7.png" />
     <Content Include="Content\Images\stopwar.jpeg" />
     <Content Include="Content\Images\teacher.jpg" />
+    <Content Include="Content\Images\telephone-fill.svg" />
     <Content Include="Content\Images\twitter.svg" />
     <Content Include="Content\Images\Working-with-NES.jpg" />
     <Content Include="favicon.ico" />
